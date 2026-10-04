@@ -1,0 +1,192 @@
+/* Thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Extra 2 (CSS): Cấu trúc Sticky Footer --- */
+html, body {
+    height: 100%; /* Cần thiết để giãn chiều cao */
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Chiếm toàn bộ không gian trống, đẩy footer xuống đáy */
+    padding-bottom: 40px;
+}
+
+/* --- Thanh điều hướng --- */
+header {
+    background-color: #f1782b; /* Màu cam FPT */
+    color: #fff;
+    padding: 15px 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Khối Giới thiệu (Hero) --- */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.hero h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skills i {
+    font-size: 3rem;
+    margin: 0 15px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.skills i:hover {
+    color: #f1782b;
+}
+
+/* --- Khối Dự án (CSS Grid Responsive) --- */
+#projects, #calendar {
+    padding: 40px 5%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.project-grid {
+    display: grid;
+    /* Tự động đổ cột linh hoạt dựa trên kích thước màn hình */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    background-color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #f1782b;
+}
+
+/* --- Khối Nhúng Lịch --- */
+.calendar-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- Chân trang --- */
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+}
+
+.socials {
+    margin-top: 10px;
+}
+
+.socials a {
+    color: #ccc;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* --- Extra 3 (CSS): Modal / Lightbox --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%; 
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #888;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* --- Responsive cho màn hình nhỏ --- */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+    }
+}

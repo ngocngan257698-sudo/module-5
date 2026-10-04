@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Noname</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Extra 1: Font Awesome CDN cho các biểu tượng -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Extra 2: Wrapper container hỗ trợ tạo Sticky Footer -->
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="logo">NN.</div>
+                <ul class="nav-links">
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#projects">Dự án</a></li>
+                    <li><a href="#calendar">Lịch trình</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about" class="hero">
+                <h1>Chào bạn, mình là khongten</h1>
+                <p>Sinh viên Kỹ thuật Phần mềm .</p>
+                <div class="skills">
+                    <i class="fab fa-html5" title="HTML5"></i>
+                    <i class="fab fa-css3-alt" title="CSS3"></i>
+                    <i class="fab fa-java" title="Java"></i>
+                    <i class="fab fa-git-alt" title="Git"></i>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Dự án nổi bật</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Hệ thống Form CLB</h3>
+                        <p>Ứng dụng tự động hóa quy trình đăng ký tham gia CLB cho kỳ mới.</p>
+                        <!-- Extra 3: Nút gọi Modal/Lightbox hiển thị chi tiết -->
+                        <button class="btn" onclick="openModal()">Xem chi tiết</button>
+                    </div>
+                    <div class="project-card">
+                        <h3>Coursera Web Development</h3>
+                        <p>Các dự án xây dựng giao diện web đáp ứng (responsive) thuần HTML/CSS.</p>
+                        <button class="btn" onclick="openModal()">Xem chi tiết</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="calendar">
+                <h2>Lịch trình & Sự kiện</h2>
+                <!-- Extra 4: Nhúng Google Calendar -->
+                <div class="calendar-container">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=en.vietnamese%23holiday%40group.v.calendar.google.com&ctz=Asia%2FHo_Chi_Minh" style="border: 0" width="100%" height="350" frameborder="0" scrolling="no" title="Google Calendar"></iframe>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer bám đáy (Sticky Footer) -->
+    <footer>
+        <p>&copy; 2026 noname. Mọi quyền được bảo lưu.</p>
+        <div class="socials">
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <!-- Cấu trúc HTML của Modal/Lightbox -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Chi tiết dự án</h2>
+            <p>Phần này dùng để hiển thị hình ảnh bản demo lớn hơn hoặc mô tả kỹ thuật (ví dụ: source code thao tác trên NetBeans hoặc VS Code).</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
