@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Noname</title>
+    
+    <!-- Nhúng CSS của Bootstrap 5 qua CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Tùy chỉnh CSS để tạo các khối placeholder giống bản phác thảo (wireframe) */
+        .placeholder-img {
+            background-color: #f8f9fa;
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            border: 2px dashed #dee2e6;
+            font-weight: bold;
+        }
+        .card-img-placeholder {
+            height: 180px;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            border-bottom: 2px dashed #dee2e6;
+        }
+        footer {
+            border-top: 1px solid #dee2e6;
+            padding-top: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Thanh điều hướng (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Noname Design</a>
+            
+            <!-- Nút Hamburger Menu cho giao diện Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Phần Hero (Giới thiệu bản thân) -->
+    <header class="container mt-5 mb-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- Khối ảnh đại diện phác thảo -->
+                <div class="placeholder-img mb-4">
+                    [Hero Image Placeholder]
+                </div>
+                <h1 class="fw-bold">Hi, I'm Noname - Software Engineer</h1>
+                <p class="lead text-muted">Welcome to my personal portfolio. I specialize in Java, web development, and creating functional applications.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Phần Dự án (My Work) -->
+    <section class="container mb-5">
+        <h2 class="mb-4 text-center text-md-start fw-bold">My Work</h2>
+        
+        <!-- Grid Bootstrap: col-12 cho mobile (1 cột), col-md-4 cho desktop (3 cột) -->
+        <div class="row g-4">
+            
+            <!-- Dự án 1 -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-img-placeholder">[Image]</div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">[Project 1]</h5>
+                        <p class="card-text text-muted">Description for project 1. This text acts as the lines drawn in the wireframe.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dự án 2 -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-img-placeholder">[Image]</div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">[Project 2]</h5>
+                        <p class="card-text text-muted">Description for project 2. This text acts as the lines drawn in the wireframe.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dự án 3 -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-img-placeholder">[Image]</div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">[Project 3]</h5>
+                        <p class="card-text text-muted">Description for project 3. This text acts as the lines drawn in the wireframe.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Chân trang (Footer) -->
+    <footer class="container pb-4">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start text-muted">
+                <p class="mb-0">&copy; 2026 Noname. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end mt-3 mt-md-0 fs-4">
+                <!-- Các ô vuông đại diện cho icon mạng xã hội -->
+                <span class="border px-2 py-1 mx-1">[ GH ]</span>
+                <span class="border px-2 py-1 mx-1">[ IN ]</span>
+                <span class="border px-2 py-1 mx-1">[ FB ]</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Nhúng JS của Bootstrap 5 (Bắt buộc để nút Hamburger hoạt động trên Mobile) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
